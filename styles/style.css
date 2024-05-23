@@ -8,22 +8,33 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #763711;
+    background-color: #b1550c;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    color: #fffbeb;
 }
 
 h2 {
-color: #F7C028;
-text-transform: capitalize;
-letter-spacing: 2px;
+    color: #FFFBEB;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    
+ }
 
+.container {
+    border-style: double;
+    width: 20vw;
+    height: 45vh;
+    margin: 100px auto;
+    padding: 60px 50px 10px;
+    text-align: center;
+    font-size: 16px;
+    background: #FDF3C8;
 }
+
 
 .todo {
     display: flex;

@@ -1,6 +1,6 @@
 const dom = {
     input: document.getElementById('input'),
-    btn: document.getElementById('btn'),
+    btn: document.querySelector('.btn'),
     list: document.querySelector('.list'),
 };
 

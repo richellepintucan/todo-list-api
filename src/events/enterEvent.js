@@ -1,10 +1,10 @@
 import dom from '../dom.js';
-import addTodoHandler from '../handlers/addTodoHandler.js';
+import addHandler from '../handlers/addHandler.js';
 
 const enterEvent = () => {
     dom.input.addEventListener('keyup', (e) => {
         if (e.key === 'Enter') {
-            addTodoHandler();
+            addHandler();
         }
     });
 };

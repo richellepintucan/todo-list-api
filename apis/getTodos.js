@@ -2,13 +2,15 @@ const getTodos = async () => {
     try {
         const res = await fetch('http://localhost:3000/todos');
         if (!res.ok) {
-            throw new Error(`Failed to fetch todos with status ${res.status}`);
+            throw new Error(
+                `Cannot fetch data. The response status: ${res.status}`,
+            );
         }
-
         const todos = await res.json();
+
         return todos;
-    } catch (error) {
-        return error;
+    } catch (err) {
+        console.error(err);
     }
 };
 

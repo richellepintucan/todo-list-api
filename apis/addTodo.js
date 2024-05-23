@@ -1,19 +1,20 @@
-const addTodo = async (todoData) => {
+const addTodo = async (newData) => {
     try {
-        const res = await fetch('http://localhost:3000/todos', {
+        const res = await fetch(`http://localhost:3000/todos`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-type': 'application/json',
             },
-            body: JSON.stringify(todoData),
+            body: JSON.stringify(newData),
         });
-
         if (!res.ok) {
-            throw new Error(`Failed to add todo with status ${res.status}`);
+            throw new Error(
+                `Failed to add new todo with status: ${res.status}`,
+            );
         }
         return await res.json();
-    } catch (error) {
-        return error;
+    } catch (err) {
+        console.error(err);
     }
 };
 
