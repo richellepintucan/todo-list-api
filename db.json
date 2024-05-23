@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Learn Javascript",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Go to the supermarket",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "Go to the school",
+      "completed": false
+    },
+    {
+      "id": "4",
+      "title": "Shopping",
+      "completed": false
+    }
+  ]
+}
