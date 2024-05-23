@@ -1,7 +1,7 @@
 import loadEvent from './events/loadEvent.js';
-import addTodoEvent from './events/addTodoEvent.js';
+import addEvent from './events/addEvent.js';
 import enterEvent from './events/enterEvent.js';
 
 loadEvent();
-addTodoEvent();
+addEvent();
 enterEvent();

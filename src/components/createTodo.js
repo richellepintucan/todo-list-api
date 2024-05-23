@@ -1,38 +1,42 @@
 import checkboxHandler from '../handlers/checkboxHandler.js';
-import deleteHandler from '../handlers/deleteHandler.js';
+import deleteBtnHandler from '../handlers/deleteBtnHandler.js';
 
 const createTodo = (todoData) => {
-    // container
+    //container
     const container = document.createElement('div');
     container.classList.add('todo');
     container.id = todoData.id;
 
-    // title
-    const title = document.createElement('h3');
-    title.className = 'title';
-    title.innerText = todoData.title;
+    // items
+    const item = document.createElement('h3');
+    item.classList.add('item');
+    item.innerText = todoData.title;
 
-    // checkbox
+    //checkbox and btn container
+    const btnContainer = document.createElement('div');
+    btnContainer.classList.add('btn-container');
+
+    //checkbox
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = todoData.completed;
+    checkbox.classList.add('checkbox');
 
     checkbox.addEventListener('change', () => {
         checkboxHandler(todoData);
     });
 
-    // delete button
+    //delete btn
+    const deleteBtn = document.createElement('button');
+    deleteBtn.classList.add('delete-btn');
+    deleteBtn.innerText = 'Delete';
 
-    const deleteButton = document.createElement('button');
-    deleteButton.className = 'delete';
-    deleteButton.innerText = 'Delete';
-
-    deleteButton.addEventListener('click', () => {
-        deleteHandler(todoData.id);
+    deleteBtn.addEventListener('click', () => {
+        deleteBtnHandler(todoData.id);
     });
 
-    container.append(title, checkbox, deleteButton);
-
+    btnContainer.append(checkbox, deleteBtn);
+    container.append(item, btnContainer);
     return container;
 };
 
